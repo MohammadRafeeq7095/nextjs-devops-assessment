@@ -1,5 +1,10 @@
 name: Docker Build & Push
 
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
 on:
   push:
     branches: [ main ]
@@ -25,4 +30,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/mohammadrafeeq7095/my-nextjs-app:latest
-
